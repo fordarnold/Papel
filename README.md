@@ -1,4 +1,4 @@
-# Papel
+# Papel Banking Application
 
 Andela Developer Challenge: Build a Product
 
