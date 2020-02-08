@@ -1,0 +1,62 @@
+/**
+ * COLOUR PALETTE
+ * ----------------------------------------------------
+ *
+ * - https://www.invisionapp.com/inside-design/quick-guide-color-palette
+ * - https://color.adobe.com/avo---bright-color-theme-10085604
+ * - https://paletton.com/#uid=50x0u0kmbqZcIEoi0uMqdnatPiq
+ * 
+ * #FFFFFF
+ * #000000
+ *
+ */
+
+/**
+
+ #####  Color Palette by Paletton.com
+ #####  Palette URL: http://paletton.com/#uid=63S0u0kkBSH92YXftW1pdOiuhHI
+ 
+ *** Primary color:
+ 
+    shade 0 = #667DEA = rgb(102,125,234) = rgba(102,125,234,1) = rgb0(0.4,0.49,0.918)
+    shade 1 = #BCC7FA = rgb(188,199,250) = rgba(188,199,250,1) = rgb0(0.737,0.78,0.98)
+    shade 2 = #8C9EF2 = rgb(140,158,242) = rgba(140,158,242,1) = rgb0(0.549,0.62,0.949)
+    shade 3 = #4560DF = rgb( 69, 96,223) = rgba( 69, 96,223,1) = rgb0(0.271,0.376,0.875)
+    shade 4 = #2342CE = rgb( 35, 66,206) = rgba( 35, 66,206,1) = rgb0(0.137,0.259,0.808)
+ 
+ *** Secondary color (1):
+ 
+    shade 0 = #8F63EA = rgb(143, 99,234) = rgba(143, 99,234,1) = rgb0(0.561,0.388,0.918)
+    shade 1 = #CFBAFA = rgb(207,186,250) = rgba(207,186,250,1) = rgb0(0.812,0.729,0.98)
+    shade 2 = #AC89F2 = rgb(172,137,242) = rgba(172,137,242,1) = rgb0(0.675,0.537,0.949)
+    shade 3 = #7541DF = rgb(117, 65,223) = rgba(117, 65,223,1) = rgb0(0.459,0.255,0.875)
+    shade 4 = #581FCE = rgb( 88, 31,206) = rgba( 88, 31,206,1) = rgb0(0.345,0.122,0.808)
+ 
+ *** Secondary color (2):
+ 
+    shade 0 = #58C3E6 = rgb( 88,195,230) = rgba( 88,195,230,1) = rgb0(0.345,0.765,0.902)
+    shade 1 = #B5E8F9 = rgb(181,232,249) = rgba(181,232,249,1) = rgb0(0.71,0.91,0.976)
+    shade 2 = #80D4F0 = rgb(128,212,240) = rgba(128,212,240,1) = rgb0(0.502,0.831,0.941)
+    shade 3 = #34B0D9 = rgb( 52,176,217) = rgba( 52,176,217,1) = rgb0(0.204,0.69,0.851)
+    shade 4 = #1299C5 = rgb( 18,153,197) = rgba( 18,153,197,1) = rgb0(0.071,0.6,0.773)
+ 
+ *** Complement color:
+ 
+    shade 0 = #FFCF5B = rgb(255,207, 91) = rgba(255,207, 91,1) = rgb0(1,0.812,0.357)
+    shade 1 = #FFEAB7 = rgb(255,234,183) = rgba(255,234,183,1) = rgb0(1,0.918,0.718)
+    shade 2 = #FFDB84 = rgb(255,219,132) = rgba(255,219,132,1) = rgb0(1,0.859,0.518)
+    shade 3 = #FFC436 = rgb(255,196, 54) = rgba(255,196, 54,1) = rgb0(1,0.769,0.212)
+    shade 4 = #FFB80E = rgb(255,184, 14) = rgba(255,184, 14,1) = rgb0(1,0.722,0.055)
+
+*/
+
+.bg-primary { background-color: #5A67D8; }
+.bg-primary-dark { background-color: #3C366B; }
+.bg-secondary { background-color: #4BA2D1; }
+.bg-secondary-dark { background-color: #4BA2D1; }
+.bg-complimentary { background-color: #A3D5F0; }
+.bg-complimentary-dark { background-color: #A3D5F0; }
+
+.color-primary { color: #5A67D8; }
+.color-secondary { color: #4BA2D1; }
+.color-complimentary { color: #A3D5F0; }

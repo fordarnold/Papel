@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Papel — Banking App</title>
+        <title>Sign In - Papel — Banking App</title>
         <meta name="description" content="Papel is a light-weight core banking application that powers banking operations like account creation, customer deposits, and withdrawals.">
         <meta name="author" content="Arnold Mwumva <fordarnold@gmail.com>">
 
@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- CSS -->
         <link rel="stylesheet" href="./../css/fonts.css">
+        <link rel="stylesheet" href="./../css/colours.css">
         <link rel="stylesheet" href="./../css/top.navbar.css">
         <link rel="stylesheet" href="./../css/carousel.slider.css">
         <link rel="stylesheet" href="./../css/app.css">
@@ -21,9 +22,9 @@
         <!-- https://github.com/h5bp/html5-boilerplate -->
         <meta name="theme-color" content="#fafafa">
     </head>
-    
+
     <body>
-        
+
         <!-- Page header -->
         <header>
             <!-- <div class="container"> -->
@@ -35,15 +36,12 @@
                 <input type="checkbox" id="chkToggle"></input>
                 <ul class="main-nav" id="js-menu">
                     <li>
-                        <a href="#" class="nav-links">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-links">Products</a>
+                        <a href="./" class="nav-links">Home</a>
                     </li>
                     <li>
                         <a href="#contact-us" class="nav-links">Contact Us</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="./sign-in.html" class="nav-links">Sign Up / Login</a>
                     </li>
                 </ul>
@@ -53,7 +51,35 @@
 
         <!-- Main content of your page -->
         <main>
-            
+
+            <div class="form-modal">
+
+                <div class="form-toggle">
+                    <button id="login-toggle" onclick="toggleLogin()">sign in</button>
+                    <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
+                </div>
+
+                <div id="login-form">
+                    <form>
+                        <input type="text" placeholder="Enter email or username"/>
+                        <input type="password" placeholder="Enter password"/>
+                        <button type="button" class="btn login">login</button>
+                        <p><a href="javascript:void(0)">Forgotten account</a></p>
+                    </form>
+                </div>
+
+                <div id="signup-form">
+                    <form method="GET" action="./user/dashboard.html">
+                        <input type="email" placeholder="Enter your email"/>
+                        <input type="text" placeholder="Choose username"/>
+                        <input type="password" placeholder="Create password"/>
+                        <button type="submit" class="btn signup">create account</button>
+                        <p>Clicking <strong>create account</strong> means that you are agree to our <a href="javascript:void(0)">terms of services</a>.</p>
+                    </form>
+                </div>
+
+            </div>
+
         </main>
 
         <!-- Page footer -->
@@ -72,7 +98,7 @@
                 <p><small>Copyright &copy; 2020. All rights reserved.</small></p>
             </div>
         </footer>
-        
+
         <script src="./../js/app.js"></script>
     </body>
 </html>
