@@ -39,7 +39,16 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-y: scroll;
-	background-color: rgba(188, 199, 250, 0.4);
+  background-color: rgba(188, 199, 250, 0.4);
+  font-family: sans-serif;
+}
+
+header {
+  margin: 0;
+}
+
+footer { 
+  padding: 20px 0; 
 }
 
 /* Typography */
@@ -183,6 +192,28 @@ body > header {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+/**
+ * ----------------------------------------------------
+ *
+ * PAGE <FOOTER> STYLES
+ *
+ * ----------------------------------------------------
+ */
+
+body > footer .fa {
+  padding: 0 10px;
+  font-size: 2rem;
+  transition: color 0.5s ease;
+}
+
+body > footer .fa:hover {
+  color: #5A67D8;
+}
+
+#footer-copyright {
+  margin-top: 40px;
 }
 
 /**
