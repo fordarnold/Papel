@@ -237,12 +237,16 @@ body > footer .fa:hover {
 /**
  * ----------------------------------------------------
  *
- * FORM STYLES: SIGN UP
+ * FORM STYLES: SIGN IN
  *
  * ----------------------------------------------------
  */
 
- .form-modal{
+.form-modal, .form-modal input {
+  box-sizing: border-box;
+}
+
+.form-modal{
   position:relative;
   width:450px;
   height:auto;
