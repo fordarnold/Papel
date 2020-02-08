@@ -39,7 +39,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-y: scroll;
-	background-color: #FFF;
+	background-color: rgba(188, 199, 250, 0.4);
 }
 
 /* Typography */
@@ -71,6 +71,15 @@ h1, h2, h3 {
 	width: 80%;
 	margin: auto;
 	overflow: hidden;
+}
+
+.container.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.container.flex.center {
+  justify-content: center;
 }
 
 .box-50 {
@@ -200,5 +209,9 @@ body > header {
 .page { background-color: #DDD; }
 
 /*-------------------------- Landing Page --------------------------*/
+#action-bar {
+  padding: 15px 0;
+  background-color: silver;
+}
 
 /*-------------------------- Sign In Page --------------------------*/
