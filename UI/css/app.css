@@ -1,32 +1,4 @@
 /**
- * COLOUR PALETTE
- * ----------------------------------------------------
- *
- * - https://www.invisionapp.com/inside-design/quick-guide-color-palette
- * - https://color.adobe.com/avo---bright-color-theme-10085604
- * - https://paletton.com/#uid=50x0u0kmbqZcIEoi0uMqdnatPiq
- * 
- * #FFFFFF
- * #000000
- *
- * #5A67D8
- * #4BA2D1
- * #A3D5F0
- *
- */
-
-.bg-primary { background-color: #5A67D8; }
-.bg-primary-dark { background-color: #3C366B; }
-.bg-secondary { background-color: #4BA2D1; }
-.bg-secondary-dark { background-color: #4BA2D1; }
-.bg-complimentary { background-color: #A3D5F0; }
-.bg-complimentary-dark { background-color: #A3D5F0; }
-
-.color-primary { color: #5A67D8; }
-.color-secondary { color: #4BA2D1; }
-.color-complimentary { color: #A3D5F0; }
-
-/**
  * ----------------------------------------------------
  *
  * GLOBAL STYLES
