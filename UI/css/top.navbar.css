@@ -1,11 +1,10 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+/* Navigation Bar */
 
 .navbar {
-  font-size: 18px;
-  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(260deg, #1299C5 0%, #581FCE 100%);
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
   padding-bottom: 10px;
+  font-family: 'Poppins', 'Arial', sans-serif;
 }
 
 .main-nav {
@@ -15,7 +14,6 @@
 
 .nav-links,
 .logo {
-  transition: color 0.5s ease;
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
 }
@@ -26,11 +24,16 @@
 }
 
 .logo {
+  transition: color 0.5s ease;
   display: inline-block;
-  font-family: 'Sriracha', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 2rem;
   margin-top: 10px;
   margin-left: 20px;
+}
+
+.nav-links {
+  font-weight: bold;
 }
 
 .navbar-toggle {
@@ -86,8 +89,13 @@
     display: none;
   }
   
-  .logo:hover,
   .nav-links:hover {
+    color: rgba(255, 217, 168, 1);
+  }
+
+  .logo:hover {
     color: rgba(255, 255, 255, 0.8);
   }
+
+
 }
