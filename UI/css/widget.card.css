@@ -8,6 +8,10 @@ h2 {
   padding: 0 1em;
 }
 
+.card-content {
+  width: 100%;
+}
+
 @media screen and (min-width: 52em) {
   .centered {
     max-width: 52em;
