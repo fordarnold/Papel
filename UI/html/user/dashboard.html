@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="./../../css/protected.navbar.css">
         <link rel="stylesheet" href="./../../css/widget.card.css">
         <link rel="stylesheet" href="./../../css/widget.table.css">
+        <link rel="stylesheet" href="./../../css/widget.modal.css">
         <link rel="stylesheet" href="./../../css/app.css">
         
         <!-- https://github.com/h5bp/html5-boilerplate -->
@@ -63,6 +64,15 @@
         <!-- Main content of your page -->
         <main>
             <div class="container">
+
+                <!-- <section class="demo">
+                    <div class="demo__card">
+                        <h2 class="demo__title">Click a button to trigger the modal</h2>
+                        <button data-modal-trigger="sample-modal" class="demo__btn demo__btn--secondary">Sample Modal</button>
+                        <button data-modal-trigger="sample-modal2" class="demo__btn demo__btn--secondary">Sample Modal 2</a>
+                        <button data-modal-trigger="sample-modal3" class="demo__btn demo__btn--secondary">Full Screen Modal</button>
+                    </div>
+                </section> -->
                 
                 <br>
                 
@@ -121,12 +131,14 @@
                         <th>Amount</th>
                         <th>Date/Time</th>
                         <th>Balance</th>
+                        <th>...</th>
                     </tr>
                     <tr>
                         <td data-th="Movie Title">Debit</td>
                         <td data-th="Genre">50000</td>
                         <td data-th="Year">20-Oct-2019 13:00</td>
                         <td data-th="Gross">80000</td>
+                        <td><a href="#" class="button" data-modal-trigger="sample-modal">Show Details</a></td>
                     </tr>
                     <tr>
                         <td data-th="Movie Title">Debit</td>
@@ -141,6 +153,25 @@
                         <td data-th="Gross">80000</td>
                     </tr>
                 </table>
+
+                <!-- Modal: Single Transaction -->
+                <div class="modal" data-modal-name="sample-modal">
+                    <div class="modal__dialog">
+                        <button class="modal__close" data-modal-dismiss>×</button>
+                        <header class="modal__header">
+                            <h3 class="modal__title">Transaction #23134</h3>
+                        </header>
+                        <div class="modal__content">
+                            <p>Type: Debit</p>
+                            <p>Amount: 30,000</p>
+                            <p>Date: 02-Feb-2020 11:30</p>
+                            <p>Staff: John Legend</p>
+                        </div>
+                        <!-- <footer class="modal__footer">
+                            <button  data-modal-dismiss class="demo__btn">Dismiss</button>
+                        </footer> -->
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -151,6 +182,7 @@
             </div>
         </footer>
         
+        <script src="./../../js/widget.modal.js"></script>
         <script src="./../../js/app.js"></script>
     </body>
 </html>
