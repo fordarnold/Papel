@@ -42,8 +42,8 @@
                     <li>
                         <a href="../"><i class="fa fa-angle-left" aria-hidden="true"></i> Back to Site</a>
                     </li>
-                    <li class="active"><a href="#">Dashboard</a></li>
-                    <li><a href="./transaction-history.html">Transactions</a></li>
+                    <li><a href="./dashboard.html">Dashboard</a></li>
+                    <li><a href="#">Transactions</a></li>
                     <li>
                         <!-- First Tier Drop Down -->
                         <label for="drop-1" class="toggle">
@@ -52,7 +52,7 @@
                         <a href="#">Ben Simmons (Client)</a>
                         <input type="checkbox" id="drop-1"/>
                         <ul>
-                            <li><a href="#">My Account</a></li>
+                            <li><a href="#" class="active">My Account</a></li>
                             <li><a href="../sign-in.html">Sign Out</a></li>
                         </ul>
                     </li>
@@ -69,16 +69,65 @@
                 <br>
 
                 <form action="#">
-                    
+
                     <div>
-                        <label class="desc" id="title1" for="Field1">Full Name</label>
+                        <label class="desc" id="title1" for="Field1">Account Number</label>
+                        <div>
+                            <input id="Field1" name="Field1" type="number" class="field text fn" value="" size="8" tabindex="1">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="desc" id="title3" for="Field3">Created On</label>
+                        <div>
+                            <input id="Field3" name="Field3" type="date" spellcheck="false" tabindex="3"> 
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="desc" id="title3" for="Field3">Owner</label>
+                        <div>
+                            <input id="Field3" name="Field3" type="number" spellcheck="false" tabindex="3"> 
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="desc" id="title106" for="Field106">Type</label>
+                        <div>
+                            <select id="Field106" name="Field106" class="field select medium" tabindex="11"> 
+                                <option value="First Choice">Savings</option>
+                                <option value="Second Choice">Current</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="desc" id="title106" for="Field106">Status</label>
+                        <div>
+                            <select id="Field106" name="Field106" class="field select medium" tabindex="11"> 
+                                <option value="First Choice">First Choice</option>
+                                <option value="Second Choice">Second Choice</option>
+                                <option value="Third Choice">Third Choice</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="desc" id="title3" for="Field3">Balance</label>
+                        <div>
+                            <input id="Field3" name="Field3" type="number" tabindex="3"> 
+                        </div>
+                    </div>
+                    
+                    <!-- <div>
+                        <label class="desc" id="title1" for="Field1">Account Number</label>
                         <div>
                             <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1">
                         </div>
                     </div>
                     
                     <div>
-                        <label class="desc" id="title3" for="Field3">Email</label>
+                        <label class="desc" id="title3" for="Field3">Created On</label>
                         <div>
                             <input id="Field3" name="Field3" type="email" spellcheck="false" value="" maxlength="255" tabindex="3"> 
                         </div>
@@ -158,8 +207,9 @@
                         <div>
                             <input id="saveForm" name="saveForm" type="submit" value="Submit">
                         </div>
-                    </div>
+                    </div> -->
                     
+                    <button type="submit">Setup New Bank Account</button>
                 </form>
             </div>
             <!-- /.container -->
