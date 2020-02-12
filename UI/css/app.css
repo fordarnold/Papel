@@ -308,7 +308,7 @@ article.stretch {
 }
 
 .form-modal .login , .form-modal .signup{
-  background:#57b846;
+  background:#5A67D8;
   color:#fff;
 }
 
@@ -344,7 +344,7 @@ article.stretch {
 }
 
 #login-toggle{
-  background:#57b846;
+  background:#5A67D8;
   color:#ffff;
 }
 
@@ -404,7 +404,7 @@ article.stretch {
 }
 
 .form-modal p a{
-  color:#57b846;
+  color:#5A67D8;
   text-decoration: none;
   transition:0.2s;
 }
