@@ -72,11 +72,18 @@
 
                 <div id="signup-form">
                     <form method="GET" action="./user/dashboard.html">
+                        <select name="" id="">
+                            <option value="user" selected>Client</option>
+                            <option value="staff">Cashier</option>
+                            <option value="admin">Admin</option>
+                        </select>
                         <input type="email" required placeholder="Enter your email"/>
                         <input type="text"  placeholder="Your first name"/>
                         <input type="text"  placeholder="Your last name"/>
-                        <input type="password" required maxlength="6" placeholder="Create password"/>
+                        <input type="password" required minlength="4" placeholder="Create password"/>
+
                         <button type="submit" class="btn signup">create account</button>
+                        
                         <p>
                             <small>By clicking "create account", you are agree to our <a href="#">terms of services</a>.</small>
                         </p>
