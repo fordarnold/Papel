@@ -71,6 +71,16 @@ h1, h2, h3 {
 	margin: auto;
 }
 
+main section {
+  padding: 15px 0;
+}
+
+@media only screen and (max-width:500px){
+  .container.flex {
+    flex-wrap: wrap;
+  }
+}
+
 /**
  * ----------------------------------------------------
  *
@@ -212,9 +222,17 @@ body > footer .fa:hover {
 .page { background-color: #DDD; }
 
 /*-------------------------- Landing Page --------------------------*/
-#action-bar {
-  padding: 15px 0;
-  background-color: silver;
+article.stretch {
+  width: 100%;
+}
+
+#about-us article {
+  padding: 5px 20px;
+}
+
+#products figure img {
+  max-width: 200px;
+  max-height: 200px;
 }
 
 /*---- TABLET ----*/
