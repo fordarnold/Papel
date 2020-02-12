@@ -36,10 +36,10 @@
                 <input type="checkbox" id="chkToggle"></input>
                 <ul class="main-nav" id="js-menu">
                     <li>
-                        <a href="#" class="nav-links">About Us</a>
+                        <a href="#about-us" class="nav-links">About Us</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-links">Products</a>
+                        <a href="#products" class="nav-links">Products</a>
                     </li>
                     <li>
                         <a href="#contact-us" class="nav-links">Contact Us</a>
@@ -54,6 +54,7 @@
 
         <!-- Main content of your page -->
         <main>
+
             <!-- Slider: Showcase -->
             <section id="showcase">
                 <div class="wrapper">
@@ -106,7 +107,7 @@
             <!-- /.showcase -->
 
             <!-- Action Bar -->
-            <section id="action-bar">
+            <section id="action-bar" class="action">
                 <div class="container flex center">
                     
                     <div class="centered">
@@ -118,7 +119,60 @@
 
                 </div>
             </section>
-            <!-- /.showcase -->
+            <!-- /.action -->
+
+            <section id="about-us">
+                <div class="container flex wrap">
+                    <article id="background" class="stretch">
+                        <h3>What is Papel?</h3>
+                        <p>
+                            Papel is a light-weight core banking application 
+                            that powers banking operations like account creation, 
+                            customer deposits, and withdrawals. This app is meant 
+                            to support a single bank, where users can signup and create 
+                            bank accounts online, but must visit the branch to withdraw or 
+                            deposit money.
+                        </p>
+                    </article>
+                    <article id="features" class="stretch">
+                        <h3>How It Works</h3>
+                        <p>
+                            <ul>
+                                <li>User (client) can sign up.</li>
+                                <li>User (client) can create an account.</li>
+                                <li>User (client) can view account transaction history.</li>
+                                <li>User (client) can view a specific account transaction.</li>
+                                <li>Staff (cashier) can debit a user (client) account.</li>
+                                <li>Staff (cashier) can credit a user (client) account.</li>
+                                <li>and much more...</li>
+                            </ul>
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="products" class="bg-complimentary text-center">
+                <h3>Products and Services</h3>
+                <div class="container flex">
+                    <figure class="figure">
+                        <img src="./../img/iconfinder_savings.png" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-xs-right">Savings Accounts</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./../img/iconfinder_current.png" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-xs-right">Current Accounts</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./../img/iconfinder_dashboard.png" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-xs-right">Account Dashboard</figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="./../img/iconfinder_security.png" class="figure-img img-fluid rounded" alt="">
+                        <figcaption class="figure-caption text-xs-right">Security Plus</figcaption>
+                    </figure>
+                </div>
+            </section>
+            
         </main>
 
         <!-- Page footer -->
