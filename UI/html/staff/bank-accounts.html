@@ -69,7 +69,7 @@
 
                 <!-- Table: recent transactions -->
                 <h3>All Accounts</h3>
-                <table class="rwd-table">
+                <table id="table-accounts" class="rwd-table">
                     <tr>
                         <th>Account Number</th>
                         <th>Date Created</th>
@@ -94,8 +94,8 @@
                                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                             </a>
                             &nbsp; &nbsp;
-                            <a href="#" class="button" data-modal-trigger="delete-account">
-                                Delete 
+                            <a href="#" class="button" id="account-delete" data-modal-trigger="delete-warning-modal">
+                                Delete
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </a>
                         </td>
@@ -131,7 +131,7 @@
                         <td data-th="">Active</td>
                         <td data-th="">152000</td>
                         <td>
-                            <a href="#" class="button" data-modal-trigger="sample-modal">
+                            <a href="#" class="button" data-modal-trigger="account-manager-modal">
                                 Debit/Credit
                                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                             </a>
