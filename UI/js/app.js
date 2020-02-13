@@ -16,11 +16,33 @@ function toggleLogin(){
 	document.getElementById("login-form").style.display="block";
 }
 
+function submitSignIn(){
+
+	// Stop default submission redirect
+	event.preventDefault(); event.stopPropagation();
+
+	var selectUserType = document.getElementById('input-user-type-login');
+	var optionSelected = selectUserType.options[selectUserType.selectedIndex].value;
+
+	redirectUserSession(optionSelected);
+}
+
 function submitSignUp(){
+	
+	// Stop default submission redirect
+	event.preventDefault(); event.stopPropagation();
+	
 	var selectUserType = document.getElementById('input-user-type');
 	var optionSelected = selectUserType.options[selectUserType.selectedIndex].value;
 
-	switch (optionSelected) {
+	redirectUserSession(optionSelected);
+}
+
+function redirectUserSession(userType) {
+	
+	var location = null;
+
+	switch (userType) {
 		case "admin":
 			location = './admin/users.html';
 			break;
@@ -36,5 +58,8 @@ function submitSignUp(){
 			break;
 	}
 
-	return location;
+	// Simulate an HTTP redirect
+	window.location.replace(location);
 }
+
+

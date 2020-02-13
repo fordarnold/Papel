@@ -60,12 +60,12 @@
                 </div>
 
                 <div id="login-form">
-                    <form method="GET" action="./user/dashboard.html">
+                    <form onSubmit="submitSignIn()">
                         <input type="email" required placeholder="Enter email"/>
                         <input type="password" required placeholder="Enter password"/>
                         <br><br>
-                        <label for="">User Type</label>
-                        <select class="full-width">
+                        <label for="input-user-type-login">User Type</label>
+                        <select id="input-user-type-login" class="full-width">
                             <option value="user" selected>Client</option>
                             <option value="staff">Cashier</option>
                             <option value="admin">Admin</option>
@@ -80,12 +80,12 @@
                 <div id="signup-form">
                     <form onSubmit="submitSignUp()">
                         <input type="email" required placeholder="Enter your email"/>
-                        <input type="text"  placeholder="Your first name"/>
-                        <input type="text"  placeholder="Your last name"/>
+                        <input type="text" placeholder="Your first name"/>
+                        <input type="text" placeholder="Your last name"/>
                         <input type="password" required minlength="4" placeholder="Create password"/>
                         <br><br>
-                        <label for="">User Type</label>
-                        <select class="full-width">
+                        <label for="input-user-type">User Type</label>
+                        <select id="input-user-type" class="full-width">
                             <option value="user" selected>Client</option>
                             <option value="staff">Cashier</option>
                             <option value="admin">Admin</option>
