@@ -71,6 +71,10 @@ h1, h2, h3 {
 	margin: auto;
 }
 
+.full-width {
+  width: 100%;
+}
+
 main section {
   padding: 15px 0;
 }
@@ -160,6 +164,13 @@ main section {
  *
  * ----------------------------------------------------
  */
+
+select {
+  /* min-height: 0px; */
+  padding: 0.5em 1.7em;
+  margin: 10px 0;
+  font-size: 1rem;
+}
 
 
 /**

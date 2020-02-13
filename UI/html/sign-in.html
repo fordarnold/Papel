@@ -63,6 +63,13 @@
                     <form method="GET" action="./user/dashboard.html">
                         <input type="email" required placeholder="Enter email"/>
                         <input type="password" required placeholder="Enter password"/>
+                        <br><br>
+                        <label for="">User Type</label>
+                        <select class="full-width">
+                            <option value="user" selected>Client</option>
+                            <option value="staff">Cashier</option>
+                            <option value="admin">Admin</option>
+                        </select>
                         <button type="submit" class="btn login">login</button>
                         <p>
                             <small><a href="#">Forgot your password?</a></small>
@@ -72,16 +79,17 @@
 
                 <div id="signup-form">
                     <form method="GET" action="./user/dashboard.html">
-                        <select name="" id="">
-                            <option value="user" selected>Client</option>
-                            <option value="staff">Cashier</option>
-                            <option value="admin">Admin</option>
-                        </select>
                         <input type="email" required placeholder="Enter your email"/>
                         <input type="text"  placeholder="Your first name"/>
                         <input type="text"  placeholder="Your last name"/>
                         <input type="password" required minlength="4" placeholder="Create password"/>
-
+                        <br><br>
+                        <label for="">User Type</label>
+                        <select class="full-width">
+                            <option value="user" selected>Client</option>
+                            <option value="staff">Cashier</option>
+                            <option value="admin">Admin</option>
+                        </select>
                         <button type="submit" class="btn signup">create account</button>
                         
                         <p>
