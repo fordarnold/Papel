@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="./../../css/widget.card.css">
         <link rel="stylesheet" href="./../../css/widget.table.css">
         <link rel="stylesheet" href="./../../css/widget.modal.css">
+        <link rel="stylesheet" href="./../../css/widget.form.css">
         <link rel="stylesheet" href="./../../css/app.css">
         
         <!-- https://github.com/h5bp/html5-boilerplate -->
@@ -135,7 +136,7 @@
             </div>
             <!-- /.modal -->
 
-            <!-- Modal: Single Transaction -->
+            <!-- Modal: Account Manager -->
             <div class="modal" data-modal-name="account-manager-modal">
                 <div class="modal__dialog">
                     <button class="modal__close" data-modal-dismiss>×</button>
@@ -143,14 +144,36 @@
                         <h3 class="modal__title">Manage User's Bank Account</h3>
                     </header>
                     <div class="modal__content">
-                        <form action="">
-                            <label for=""></label>
-                            <input type="text" name="" id="">
+                        
+                        <form action="#">
+                            <div>
+                                <label class="desc" id="title1" for="Field1">Account Number</label>
+                                <div>
+                                    <input id="Field1" name="Field1" type="text" value="108918776" readonly class="field text fn" tabindex="2">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="desc" id="title106" for="Field106">Type</label>
+                                <div>
+                                    <select id="Field106" name="Field106" class="field select medium" tabindex="1"> 
+                                        <option>Credit</option>
+                                        <option>Debit</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="desc" id="title1" for="Field1">Amount</label>
+                                <div>
+                                    <input id="Field1" name="Field1" type="number" class="field text fn" tabindex="2">
+                                </div>
+                            </div>
+                            
+                            <button type="submit">Save Transaction</button>
                         </form>
+
                     </div>
-                    <!-- <footer class="modal__footer">
-                        <button  data-modal-dismiss class="demo__btn">Dismiss</button>
-                    </footer> -->
                 </div>
             </div>
             <!-- /.modal -->
