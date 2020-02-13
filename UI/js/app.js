@@ -15,3 +15,26 @@ function toggleLogin(){
 	document.getElementById("signup-form").style.display="none";
 	document.getElementById("login-form").style.display="block";
 }
+
+function submitSignUp(){
+	var selectUserType = document.getElementById('input-user-type');
+	var optionSelected = selectUserType.options[selectUserType.selectedIndex].value;
+
+	switch (optionSelected) {
+		case "admin":
+			location = './admin/users.html';
+			break;
+		case "staff":
+			location = './staff/bank-accounts.html';
+			break;
+		case "user":
+			location = './user/dashboard.html';
+			break;
+	
+		default:
+			location = false;
+			break;
+	}
+
+	return location;
+}
