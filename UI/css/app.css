@@ -71,6 +71,10 @@ h1, h2, h3 {
 	margin: auto;
 }
 
+.full-width {
+  width: 100%;
+}
+
 main section {
   padding: 15px 0;
 }
@@ -160,6 +164,13 @@ main section {
  *
  * ----------------------------------------------------
  */
+
+select {
+  /* min-height: 0px; */
+  padding: 0.5em 1.7em;
+  margin: 10px 0;
+  font-size: 1rem;
+}
 
 
 /**
@@ -278,9 +289,7 @@ article.stretch {
   left:50%;
   transform:translateX(-50%);
   background:#fff;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   box-shadow:0 3px 20px 0px rgba(0, 0, 0, 0.1)
 }
 
@@ -308,7 +317,7 @@ article.stretch {
 }
 
 .form-modal .login , .form-modal .signup{
-  background:#57b846;
+  background:#5A67D8;
   color:#fff;
 }
 
@@ -344,7 +353,7 @@ article.stretch {
 }
 
 #login-toggle{
-  background:#57b846;
+  background:#5A67D8;
   color:#ffff;
 }
 
@@ -404,7 +413,7 @@ article.stretch {
 }
 
 .form-modal p a{
-  color:#57b846;
+  color:#5A67D8;
   text-decoration: none;
   transition:0.2s;
 }
