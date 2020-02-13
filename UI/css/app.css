@@ -235,6 +235,12 @@ article.stretch {
   max-height: 200px;
 }
 
+/*-------------------------- Bank Accounts --------------------------*/
+
+.modal__dialog {
+  width: 30%;
+}
+
 /*---- TABLET ----*/
 @media only screen and (max-width: 850px) and (min-width: 450px) {
   .slider-wrapper {

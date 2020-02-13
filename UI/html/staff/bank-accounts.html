@@ -79,7 +79,20 @@
                         <th>Action</th>
                     </tr>
                     <tr>
-                        <td data-th="">127681657</td>
+                        <td data-th="">
+                            <a href="#" class="button" data-modal-trigger="account-entity-modal">127681657</a>
+                        </td>
+                        <td data-th="">20/02/2019 13:00</td>
+                        <td data-th="">Ben Simmons</td>
+                        <td data-th="">Savings</td>
+                        <td data-th="">Active</td>
+                        <td data-th="">152000</td>
+                        <td><a href="#" class="button" data-modal-trigger="account-manager-modal">Debit/Credit</a></td>
+                    </tr>
+                    <tr>
+                        <td data-th="">
+                            <a href="#" class="button" data-modal-trigger="account-entity-modal">127681657</a>
+                        </td>
                         <td data-th="">20/02/2019 13:00</td>
                         <td data-th="">Ben Simmons</td>
                         <td data-th="">Savings</td>
@@ -88,16 +101,9 @@
                         <td><a href="#" class="button" data-modal-trigger="sample-modal">Debit/Credit</a></td>
                     </tr>
                     <tr>
-                        <td data-th="">127681657</td>
-                        <td data-th="">20/02/2019 13:00</td>
-                        <td data-th="">Ben Simmons</td>
-                        <td data-th="">Savings</td>
-                        <td data-th="">Active</td>
-                        <td data-th="">152000</td>
-                        <td><a href="#" class="button" data-modal-trigger="sample-modal">Debit/Credit</a></td>
-                    </tr>
-                    <tr>
-                        <td data-th="">127681657</td>
+                        <td data-th="">
+                            <a href="#" class="button" data-modal-trigger="account-entity-modal">127681657</a>
+                        </td>
                         <td data-th="">20/02/2019 13:00</td>
                         <td data-th="">Ben Simmons</td>
                         <td data-th="">Savings</td>
@@ -108,6 +114,46 @@
                 </table>
             </div>
             <!-- /.container -->
+
+            <!-- Modal: Single Transaction -->
+            <div class="modal" data-modal-name="account-entity-modal">
+                <div class="modal__dialog">
+                    <button class="modal__close" data-modal-dismiss>×</button>
+                    <header class="modal__header">
+                        <h3 class="modal__title">Single Bank Account Details</h3>
+                    </header>
+                    <div class="modal__content">
+                        <p>Account Number: 128375635</p>
+                        <p>Balance: 30,000</p>
+                        <p>Date Created: 02-09-2020 11:30</p>
+                        <p>Type: Savings</p>
+                    </div>
+                    <!-- <footer class="modal__footer">
+                        <button  data-modal-dismiss class="demo__btn">Dismiss</button>
+                    </footer> -->
+                </div>
+            </div>
+            <!-- /.modal -->
+
+            <!-- Modal: Single Transaction -->
+            <div class="modal" data-modal-name="account-manager-modal">
+                <div class="modal__dialog">
+                    <button class="modal__close" data-modal-dismiss>×</button>
+                    <header class="modal__header">
+                        <h3 class="modal__title">Manage User's Bank Account</h3>
+                    </header>
+                    <div class="modal__content">
+                        <form action="">
+                            <label for=""></label>
+                            <input type="text" name="" id="">
+                        </form>
+                    </div>
+                    <!-- <footer class="modal__footer">
+                        <button  data-modal-dismiss class="demo__btn">Dismiss</button>
+                    </footer> -->
+                </div>
+            </div>
+            <!-- /.modal -->
 
         </main>
 
