@@ -1,0 +1,24 @@
+{
+  "name": "papel-adc",
+  "version": "1.0.0",
+  "description": "Light-weight core banking application",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "mocha --require @babel/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fordarnold/Papel.git"
+  },
+  "keywords": [
+    "banking",
+    "personal",
+    "management"
+  ],
+  "author": "Arnold Mwumva <fordarnold@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fordarnold/Papel/issues"
+  },
+  "homepage": "https://github.com/fordarnold/Papel#readme"
+}
