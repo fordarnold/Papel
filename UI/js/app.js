@@ -62,27 +62,29 @@ function redirectUserSession(userType) {
 	window.location.replace(location);
 }
 
-
-
 /**
+ * Delete an account from bank accounts table.
+ * 
  * https://www.sitepoint.com/javascript-event-delegation-is-easier-than-you-think
  */
 
-// function getEventTarget(e) {
-// 	e = e || window.event;
-// 	return e.target || e.srcElement;
-// }
+function getEventTarget(e) {
+	e = e || window.event;
+	return e.target || e.srcElement;
+}
   
-// function deleteAccountRow(e) {
+function deleteAccountRow(e) {
 
-// 	// confirm that the target element is a table cell by checking its tag name
-// 	var target = getEventTarget(e);
+	// confirm that the target element is a table cell by checking its tag name
+	var target = getEventTarget(e);
+	if(target.tagName.toLowerCase() === 'a' && target.className.includes("delete")) {
+		console.log("Event Target:", target); // alert(target);
 
-// 	if(target.tagName.toLowerCase() === 'td') {
-// 		alert(target);
-// 	}
-// }
+		var row = target.parentNode.parentNode;
+		row.parentNode.removeChild(row);
+	}
+}
 
-// document.getElementById("table-accounts").addEventListener("click", function (event) { 
-// 	deleteAccountRow(event); 
-// });
+document.getElementById("table-accounts").addEventListener("click", function (event) { 
+	deleteAccountRow(event); 
+});
