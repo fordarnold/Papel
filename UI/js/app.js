@@ -86,9 +86,9 @@ function deleteAccountRow(e) {
 	}
 }
 
-document.getElementById("table-accounts").addEventListener("click", function (event) { 
-	deleteAccountRow(event); 
-});
+// document.getElementById("table-accounts").addEventListener("click", function (event) { 
+// 	deleteAccountRow(event); 
+// });
 
 /**
  * Smooth scrolling.
@@ -96,6 +96,7 @@ document.getElementById("table-accounts").addEventListener("click", function (ev
  * @link https://css-tricks.com/snippets/jquery/smooth-scrolling
  */
 var btnScrollTop = document.getElementById("scroll-top");
+console.log("btnScrollTop", btnScrollTop);
 
 var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
@@ -105,11 +106,11 @@ btnScrollTop.addEventListener("click", function(event) {
 
 window.addEventListener("scroll", function (event) {  
 
-	console.log(scrollPosition);
+	var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-	// if (scrollPosition > 300) {
-	// 	btnScrollTop.classList.add("show");
-	// } else {
-	// 	btnScrollTop.classList.remove("show");
-	// }
+	if (scrollPosition > 300) {
+		btnScrollTop.classList.add("show");
+	} else {
+		btnScrollTop.classList.remove("show");
+	}
 });
