@@ -18,6 +18,10 @@ body {
   font-family: sans-serif;
 }
 
+a {
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+
 header {
   margin: 0;
 }
@@ -29,8 +33,12 @@ footer {
 /* Typography */
 
 h1, h2, h3 {
-	font-family: 'Lora', serif;
+	font-family: 'Hepta Slab', serif;
 }
+
+/* h3 {
+	font-family: 'Poppins', 'Arial', sans-serif;
+} */
 
 /* Helper Styles */
 
@@ -102,7 +110,16 @@ main section {
   background-color: beige;
 }
 
+.logo {
+  font-family: 'Hepta Slab', serif;
+}
+
 /*-------------------------- Buttons --------------------------*/
+
+.button,
+.btn {
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
 
 .button {
   color: #DDD;
@@ -310,11 +327,11 @@ article.stretch {
 }
 
 .form-modal .btn{
-  border-radius: 20px;
+  border-radius: 10px;
   border:none;
-  font-weight: bold;
-  font-size:1.2em;
-  padding:0.8em 1em 0.8em 1em!important;
+  /* font-weight: bold; */
+  font-size:1em;
+  padding:0.6em 1em 0.6em 1em!important;
   transition:0.5s;
   border:1px solid #ebebeb;
   margin-bottom:0.5em;
@@ -344,7 +361,7 @@ article.stretch {
   border:none;
   transition: 0.2s;
   font-size:1.1em;
-  font-weight: bold;
+  font-family: 'Hepta Slab', serif;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
@@ -395,11 +412,10 @@ article.stretch {
   padding:1.2em 1.7em 1.2em 1.7em;
   margin-top:0.6em;
   margin-bottom:0.6em;
-  border-radius: 20px;
+  border-radius: 10px;
   border:none;
   background:#ebebeb;
   outline:none;
-  font-weight: bold;
   transition:0.4s;
 }
 
@@ -408,7 +424,7 @@ article.stretch {
 }
 
 .form-modal input::-webkit-input-placeholder{
-  color:#222;
+  color: rgba(110, 109, 109, 0.863);
 }
 
 

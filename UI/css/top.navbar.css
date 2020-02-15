@@ -26,7 +26,6 @@
 .logo {
   transition: color 0.5s ease;
   display: inline-block;
-  font-family: 'Lora', serif;
   font-size: 2rem;
   margin-top: 10px;
   margin-left: 20px;
