@@ -210,6 +210,16 @@ body > header {
   margin: 0;
 }
 
+.nav.user.cashier,
+.nav.user.cashier ul li {
+  background-color: rgba(88, 31, 206, 1);
+}
+
+.nav.user.admin,
+.nav.user.admin ul li {
+  background-color: rgba(69, 96, 223, 1);
+}
+
 /**
  * ----------------------------------------------------
  *
