@@ -165,15 +165,15 @@
                             <label for="input-user-type">User Type</label>
                             <div>
                                 <select id="input-user-type" class="field select medium" tabindex="5"> 
-                                    <option value="client">Client</option>
+                                    <option value="client" selected>Client</option>
                                     <option value="staff">Staff</option>
                                 </select>
                             </div>
                         </div>
             
                         <div>
-                            <fieldset>
-                                <legend id="input-user-admin-status">Give Admin Permissions</legend>
+                            <fieldset id="input-user-admin-status" class="hidden">
+                                <legend>Give Admin Permissions</legend>
                                 <div>
                                     <div>
                                         <input type="radio" id="input-user-admin-status-true" name="admin-status" value="true" tabindex="6">
