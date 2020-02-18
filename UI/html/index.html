@@ -15,15 +15,16 @@
         <!-- CSS -->
         <link rel="stylesheet" href="./../css/fonts.css">
         <link rel="stylesheet" href="./../css/colours.css">
-        <link rel="stylesheet" href="./../css/top.navbar.css">
+        <link rel="stylesheet" href="./../css/widget.navbar.public.css">
         <link rel="stylesheet" href="./../css/widget.slider.css">
+        <link rel="stylesheet" href="./../css/widget.scroll.css">
         <link rel="stylesheet" href="./../css/app.css">
         
         <!-- https://github.com/h5bp/html5-boilerplate -->
         <meta name="theme-color" content="#fafafa">
     </head>
     
-    <body>
+    <body id="page-start">
         
         <!-- Page header -->
         <header>
@@ -177,7 +178,7 @@
         <footer>
             <section id="contact-us">
                 <div class="text-center">
-                    <h4>Contact Us</h4>
+                    <h3>Contact Us</h3>
                 </div>
                 <div class="container flex center">
                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -189,7 +190,12 @@
                 <p><small>Copyright &copy; 2020. All rights reserved.</small></p>
             </div>
         </footer>
+
+        <!-- Back to top button -->
+        <a href="#page-start" id="scroll-top"></a>
         
+        <script src="./../js/animate.smooth-scroll.js"></script>
         <script src="./../js/app.js"></script>
+        <script src="./../js/page.index.js"></script>
     </body>
 </html>

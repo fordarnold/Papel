@@ -26,7 +26,6 @@
 .logo {
   transition: color 0.5s ease;
   display: inline-block;
-  font-family: 'Lora', serif;
   font-size: 2rem;
   margin-top: 10px;
   margin-left: 20px;
@@ -100,10 +99,10 @@ li.active .nav-links:hover {
   .nav-links:hover {
     color: rgba(255, 217, 168, 1);
   }
-
+  
   .logo:hover {
     color: rgba(255, 255, 255, 0.8);
   }
-
-
+  
+  
 }

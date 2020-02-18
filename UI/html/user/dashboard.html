@@ -15,7 +15,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="./../../css/fonts.css">
         <link rel="stylesheet" href="./../../css/colours.css">
-        <link rel="stylesheet" href="./../../css/protected.navbar.css">
+        <link rel="stylesheet" href="./../../css/widget.navbar.protected.css">
         <link rel="stylesheet" href="./../../css/widget.card.css">
         <link rel="stylesheet" href="./../../css/widget.table.css">
         <link rel="stylesheet" href="./../../css/widget.modal.css">
@@ -30,7 +30,7 @@
         <header>
             
             <!-- <div class="container"> -->
-            <nav class="nav user">
+            <nav class="nav user client">
                 <div id="logo"><a href="./dashboard.html">Papel</a></div>
                 
                 <label for="drop" class="toggle">
@@ -55,7 +55,7 @@
                         <a href="#">Ben Simmons (Client)</a>
                         <input type="checkbox" id="drop-1"/>
                         <ul>
-                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">My Profile</a></li>
                             <li><a href="../sign-in.html">Sign Out</a></li>
                         </ul>
                     </li>
@@ -68,21 +68,11 @@
         <!-- Main content of your page -->
         <main>
             <div class="container">
-
-                <!-- <section class="demo">
-                    <div class="demo__card">
-                        <h2 class="demo__title">Click a button to trigger the modal</h2>
-                        <button data-modal-trigger="sample-modal" class="demo__btn demo__btn--secondary">Sample Modal</button>
-                        <button data-modal-trigger="sample-modal2" class="demo__btn demo__btn--secondary">Sample Modal 2</a>
-                        <button data-modal-trigger="sample-modal3" class="demo__btn demo__btn--secondary">Full Screen Modal</button>
-                    </div>
-                </section> -->
-                
                 <br>
 
-                <a href="./create-account.html" class="button raise-button with-shadow bg-primary">
-                    Create Account
-                </a>
+                <a href="#" 
+                    class="button raise-button with-shadow bg-primary" 
+                    data-modal-trigger="create-account-modal">Create Account</a>
                 
                 <section class="cards">
                     
@@ -93,7 +83,7 @@
                             </figure> -->
                             <div class="card-content">
                                 <h3 class="sub-title">Balance</h3>
-                                <h2>85,000</h2>
+                                <h2 class="value">85,000</h2>
                             </div>
                             <!-- .card-content -->
                         </a>
@@ -102,12 +92,9 @@
                     
                     <article class="card">
                         <a href="#">
-                            <!-- <figure class="thumbnail">
-                                <img src="http://placekitten.com/810/610" alt="meow">
-                            </figure> -->
                             <div class="card-content">
                                 <h3 class="sub-title">Currency</h3>
-                                <h2>RWF</h2>
+                                <h2 class="value">RWF</h2>
                             </div>
                             <!-- .card-content -->
                         </a>
@@ -116,12 +103,9 @@
 
                     <article class="card">
                         <a href="#">
-                            <!-- <figure class="thumbnail">
-                                <img src="http://placekitten.com/810/610" alt="meow">
-                            </figure> -->
                             <div class="card-content">
                                 <h3 class="sub-title">Transactions Today</h3>
-                                <h2>5</h2>
+                                <h2 class="value">5</h2>
                             </div>
                             <!-- .card-content -->
                         </a>
@@ -191,6 +175,77 @@
                 <p><small>Copyright &copy; 2020. All rights reserved.</small></p>
             </div>
         </footer>
+
+        <!-- Modal: Account Manager -->
+        <div class="modal" data-modal-name="create-account-modal">
+            <div class="modal__dialog">
+                <button class="modal__close" data-modal-dismiss>×</button>
+                <header class="modal__header">
+                    <h3 class="modal__title">Setup a New Bank Account</h3>
+                </header>
+                <div class="modal__content">
+
+                    <form action="#">
+                        <div>
+                            <label for="account-number" class="desc" id="">Account Number</label>
+                            <div>
+                                <input type="number" id="account-number" class="field text fn" tabindex="1">
+                            </div>
+                        </div>
+    
+                        <div>
+                            <label for="account-type">Type</label>
+                            <div>
+                                <select id="account-type" class="field select medium" tabindex="2"> 
+                                    <option value="savings">Savings</option>
+                                    <option value="current">Current</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <label for="account-status">Status</label>
+                            <div>
+                                <select id="account-status" class="field select medium" tabindex="3"> 
+                                    <option value="draft">Draft</option>
+                                    <option value="active">Active</option>
+                                    <option value="dormant">Dormant</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <label for="account-balance">Balance</label>
+                            <div>
+                                <input type="number" id="account-balance" tabindex="4"> 
+                            </div>
+                        </div>
+    
+                        <!-- Creation Date will be calculated automatically -->
+                        <!-- <div>
+                            <label for="account-creation-date">Created On</label>
+                            <div>
+                                <input type="date" id="account-creation-date" tabindex="2"> 
+                            </div>
+                        </div> -->
+    
+                        <!-- Owner is the user who owns the account (User Id) -->
+                        <!-- <div>
+                            <label class="desc" id="title3" for="Field3">Owner</label>
+                            <div>
+                                <input id="Field3" name="Field3" type="number" spellcheck="false" tabindex="3"> 
+                            </div>
+                        </div> -->
+                        
+                        <div>
+                            <button type="submit">Save New Bank Account</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <!-- /.modal -->
         
         <script src="./../../js/widget.modal.js"></script>
         <script src="./../../js/app.js"></script>

@@ -15,7 +15,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="./../../css/fonts.css">
         <link rel="stylesheet" href="./../../css/colours.css">
-        <link rel="stylesheet" href="./../../css/protected.navbar.css">
+        <link rel="stylesheet" href="./../../css/widget.navbar.protected.css">
         <link rel="stylesheet" href="./../../css/widget.card.css">
         <link rel="stylesheet" href="./../../css/widget.table.css">
         <link rel="stylesheet" href="./../../css/widget.modal.css">
@@ -31,7 +31,7 @@
         <header>
             
             <!-- <div class="container"> -->
-            <nav class="nav user">
+            <nav class="nav user admin">
                 <div id="logo"><a href="./users.html">Papel</a></div>
                 
                 <label for="drop" class="toggle">
@@ -51,7 +51,7 @@
                         <a href="#">Russell Westbrook (Admin)</a>
                         <input type="checkbox" id="drop-1"/>
                         <ul>
-                            <li><a href="#" class="active">My Account</a></li>
+                            <li><a href="#" class="active">My Profile</a></li>
                             <li><a href="../sign-in.html">Sign Out</a></li>
                         </ul>
                     </li>
@@ -67,8 +67,8 @@
                 
                 <br>
 
-                <a href="./create-user.html" class="button raise-button with-shadow bg-primary">
-                    Create User
+                <a href="#" class="button raise-button with-shadow bg-primary" data-modal-trigger="create-user-modal">
+                    Create New User
                 </a>
 
                 <!-- Table: recent transactions -->
@@ -122,8 +122,83 @@
                 <p><small>Copyright &copy; 2020. All rights reserved.</small></p>
             </div>
         </footer>
+
+        <!-- Modal: Account Manager -->
+        <div class="modal" data-modal-name="create-user-modal">
+            <div class="modal__dialog">
+                <button class="modal__close" data-modal-dismiss>×</button>
+                <header class="modal__header">
+                    <h3 class="modal__title">Setup a New User Account</h3>
+                </header>
+                <div class="modal__content">
+                    <!-- Form: Create User -->
+                    <form action="#" id="widget-form-create-user">
+                        <div>
+                            <label for="input-user-email">Email</label>
+                            <div>
+                                <input type="email" id="input-user-email" class="field text fn" spellcheck="false" tabindex="1">
+                            </div>
+                        </div>
+            
+                        <div>
+                            <label for="input-user-fname">First Name</label>
+                            <div>
+                                <input type="text" id="input-user-fname" class="field text fn" tabindex="2">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="input-user-lname">Last Name</label>
+                            <div>
+                                <input type="text" id="input-user-lname" class="field text fn" tabindex="3">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="input-user-pass">Password</label>
+                            <div>
+                                <input type="password" id="input-user-pass" class="field text fn" tabindex="4">
+                            </div>
+                        </div>
+            
+                        <div>
+                            <label for="input-user-type">User Type</label>
+                            <div>
+                                <select id="input-user-type" class="field select medium" tabindex="5"> 
+                                    <option value="client" selected>Client</option>
+                                    <option value="staff">Staff</option>
+                                </select>
+                            </div>
+                        </div>
+            
+                        <div>
+                            <fieldset id="input-user-admin-status" class="hidden">
+                                <legend>Give Admin Permissions</legend>
+                                <div>
+                                    <div>
+                                        <input type="radio" id="input-user-admin-status-true" name="admin-status" value="true" tabindex="6">
+                                        <label for="input-user-admin-status-true" class="choice">Yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="input-user-admin-status-false" name="admin-status" value="false" tabindex="7" checked="checked">
+                                        <label for="input-user-admin-status-false" class="choice">No</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div>
+                            <button type="submit">Save New User</button>
+                        </div>
+                    </form>
+                    <!-- end/ Form: Create User -->
+                </div>
+            </div>
+        </div>
+        <!-- /.modal -->
         
         <script src="./../../js/widget.modal.js"></script>
         <script src="./../../js/app.js"></script>
+        <script src="./../../js/page.admin.js"></script>
     </body>
 </html>
