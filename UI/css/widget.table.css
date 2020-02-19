@@ -47,8 +47,7 @@
 }
 
 .rwd-table {
-  background: #34495E;
-  color: #fff;
+  background: #BCC7FA;
   border-radius: .4em;
   overflow: hidden;
 }
@@ -64,5 +63,10 @@
   }
 }
 .rwd-table th, .rwd-table td:before {
+  background: #46637f;
   color: #dd5;
+}
+
+.rwd-table a.button {
+  color: #2341CE;
 }
