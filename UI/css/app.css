@@ -19,16 +19,10 @@ body {
   font-size: 14px;
 }
 
+/* Links */
+
 a {
   font-family: 'Poppins', 'Arial', sans-serif;
-}
-
-header {
-  margin: 0;
-}
-
-footer { 
-  padding: 20px 0; 
 }
 
 /* Typography */
@@ -37,11 +31,7 @@ h1, h2, h3 {
 	font-family: 'Hepta Slab', serif;
 }
 
-/* h3 {
-	font-family: 'Poppins', 'Arial', sans-serif;
-} */
-
-/* Helper Styles */
+/* Helpers */
 
 .hidden {
   visibility: hidden;
@@ -54,10 +44,22 @@ h1, h2, h3 {
 /**
  * ----------------------------------------------------
  *
- * LAYOUT STYLING
+ * LAYOUT STYLES
  *
  * ----------------------------------------------------
  */
+
+header {
+  margin: 0;
+}
+
+footer { 
+  padding: 20px 0; 
+}
+
+main section {
+  padding: 15px 0;
+}
 
 .page-wrapper {
 	/* fit to center */
@@ -91,10 +93,6 @@ h1, h2, h3 {
 
 .full-width {
   width: 100%;
-}
-
-main section {
-  padding: 15px 0;
 }
 
 @media only screen and (max-width:500px){
@@ -184,13 +182,7 @@ main section {
 /*-------------------------- Lists --------------------------*/
 
 
-/**
- * ----------------------------------------------------
- *
- * <FORM> STYLES
- *
- * ----------------------------------------------------
- */
+/*-------------------------- Forms --------------------------*/
 
 select {
   /* min-height: 0px; */
@@ -249,20 +241,7 @@ body > footer .fa:hover {
 /**
  * ----------------------------------------------------
  *
- * ACTION BAR STYLES
- *
- * ----------------------------------------------------
- */
-
-/* #action-bar .centered {
-  width: 35%;
-  margin: 0 auto;
-} */
-
-/**
- * ----------------------------------------------------
- *
- * PAGE STYLES
+ * PAGE-SPECIFIC STYLES
  *
  * ----------------------------------------------------
  */
@@ -283,7 +262,7 @@ article.stretch {
   max-height: 200px;
 }
 
-/*-------------------------- Bank Accounts --------------------------*/
+/*-------------------------- Bank Accounts Page --------------------------*/
 
 .modal__dialog {
   width: 30%;
@@ -306,15 +285,9 @@ article.stretch {
   }
 }
 
-/**
- * ----------------------------------------------------
- *
- * FORM STYLES: SIGN IN
- *
- * ----------------------------------------------------
- */
+/*-------------------------- Sign In Page --------------------------*/
 
-.form-modal, .form-modal input {
+ .form-modal, .form-modal input {
   box-sizing: border-box;
 }
 
