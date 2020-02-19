@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 12.13.1
+
+env:
+  - SECRETKEY=travisTestSecretKey
+
+cache:
+  directories:
+    - "node_modules"
+
+after_success: npm test
+# after_success: npm run coverage
