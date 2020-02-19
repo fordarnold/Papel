@@ -1,8 +1,16 @@
-import 'dotenv/config';
+import 'dotenv/config'; // Initialise dotenv library
 import express from 'express'; // Express web framework
+import cors from 'cors'; // Cross Origin Resource Sharing library
 
-const app = express(); // Create the Express app server
+const app = express(); // Initialise the Express app server
 const PORT = process.env.PORT || 3000; // Specify the server port
+
+/**
+ * API MIDDLEWARE
+ * -------------------------------------------------------------------
+ */
+
+app.use(cors());
 
 /**
  * COMMON API ROUTES & END-POINTS
@@ -22,7 +30,7 @@ app.get('/', (req, res) => {
  * -------------------------------------------------------------------
  */
 
-// start the server, on specified port
+/** Start the server, on specified port */
 const server = app.listen(PORT, () => console.log(`Papel API server listening at: http://localhost:${PORT}!`));
 
 export default server;
