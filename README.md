@@ -3,6 +3,7 @@
 Andela Developer Challenge: Build a Product
 
 [![Build Status](https://travis-ci.com/fordarnold/Papel.svg?branch=develop)](https://travis-ci.com/fordarnold/Papel)
+[![Coverage Status](https://coveralls.io/repos/github/fordarnold/Papel/badge.svg?branch=develop)](https://coveralls.io/github/fordarnold/Papel?branch=develop)
 
 ### Project Description
 
