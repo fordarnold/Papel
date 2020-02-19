@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="./../../css/widget.card.css">
         <link rel="stylesheet" href="./../../css/widget.table.css">
         <link rel="stylesheet" href="./../../css/widget.modal.css">
+        <link rel="stylesheet" href="./../../css/widget.form.css">
         <link rel="stylesheet" href="./../../css/app.css">
         
         <!-- https://github.com/h5bp/html5-boilerplate -->
@@ -176,7 +177,7 @@
             </div>
         </footer>
 
-        <!-- Modal: Account Manager -->
+        <!-- Modal: Create Account -->
         <div class="modal" data-modal-name="create-account-modal">
             <div class="modal__dialog">
                 <button class="modal__close" data-modal-dismiss>×</button>
@@ -185,18 +186,19 @@
                 </header>
                 <div class="modal__content">
 
-                    <form action="#">
+                    <!-- Form: Create Account -->
+                    <form action="#" id="widget-form-create-account">
                         <div>
-                            <label for="account-number" class="desc" id="">Account Number</label>
+                            <label for="input-account-number">Account Number</label>
                             <div>
-                                <input type="number" id="account-number" class="field text fn" tabindex="1">
+                                <input type="number" id="input-account-number" class="field text fn" tabindex="1">
                             </div>
                         </div>
     
                         <div>
-                            <label for="account-type">Type</label>
+                            <label for="input-account-type">Type</label>
                             <div>
-                                <select id="account-type" class="field select medium" tabindex="2"> 
+                                <select id="input-account-type" class="field select medium" tabindex="2"> 
                                     <option value="savings">Savings</option>
                                     <option value="current">Current</option>
                                 </select>
@@ -204,9 +206,9 @@
                         </div>
     
                         <div>
-                            <label for="account-status">Status</label>
+                            <label for="input-account-status">Status</label>
                             <div>
-                                <select id="account-status" class="field select medium" tabindex="3"> 
+                                <select id="input-account-status" class="field select medium" tabindex="3"> 
                                     <option value="draft">Draft</option>
                                     <option value="active">Active</option>
                                     <option value="dormant">Dormant</option>
@@ -215,9 +217,9 @@
                         </div>
     
                         <div>
-                            <label for="account-balance">Balance</label>
+                            <label for="input-account-balance">Balance</label>
                             <div>
-                                <input type="number" id="account-balance" tabindex="4"> 
+                                <input type="number" id="input-account-balance" tabindex="4"> 
                             </div>
                         </div>
     
