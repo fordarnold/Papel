@@ -3,7 +3,6 @@ import chai from 'chai';
 import chaiHttp from 'chai-http';
 import app from '../app';
 import users from './users.data';
-import User from '../models/User';
 
 chai.should();
 chai.use(chaiHttp);
@@ -24,35 +23,38 @@ chai.use(chaiHttp);
  */
 
 describe('API Endpoint: /api/v1/auth/signup', () => {
-  before((done) => {
-    User.createTable(); // create users table
-    User.create(users.sampleUser); // insert a sample user
-    done();
-  });
-  it('should create a new user account', (done) => {
-    chai.request(app)
-      .post('/api/v1/auth/signup')
-      .send(users.newUser) // send new user as request payload
-      .then((res) => {
-        res.should.have.status(201);
-        res.body.should.have.property('message', 'User account created successfully');
-        res.body.should.be.a('object');
-        res.body.should.have.property('token');
-        done();
-      })
-      .catch((err) => done(err));
+  // before((done) => {
+  //   // User.createTable(); // create users table
+  //   // User.create(users.sampleUser); // insert a sample user
+  //   done();
+  // });
+  it('should create a new user account', async () => {
+    /** Asyncronous response */
+    const res = await chai.request(app).post('/api/v1/auth/signup').send(users.newUser);
+
+    res.should.have.status(201);
+    res.body.should.have.property('message', 'User account created successfully');
+    res.body.should.be.a('object');
+
+    // await chai.request(app)
+    //   .post('/api/v1/auth/signup')
+    //   .send(users.newUser) // send new user as request payload
+    //   .then((res) => {
+    //     res.should.have.status(201);
+    //     res.body.should.have.property('message', 'User account created successfully');
+    //     res.body.should.be.a('object');
+    //     // res.body.should.have.property('token');
+    //     // done(); // move this to `finally()` block ~https://wietse.loves.engineering/testing-promises-with-mocha-90df8b7d2e35
+    //   })
+    //   .catch((err) => done(err));
   });
 
-  it('should not create a new user if email exists', (done) => {
-    chai.request(app)
-      .post('/api/v1/auth/signup')
-      .send(users.sampleUser) // send existing user as request payload
-      .then((res) => {
-        res.should.have.status(409);
-        res.body.should.have.property('error', 'The email for this user already exists');
-        done();
-      })
-      .catch((err) => done(err));
+  it('should not create a new user if email exists', async () => {
+    /** Asyncronous response */
+    const res = await chai.request(app).post('/api/v1/auth/signup').send(users.existingUser);
+
+    res.should.have.status(409);
+    res.body.should.have.property('error', 'The email for this user already exists');
   });
 
   // it('should not create a new user if there is a validation error', (done) => {

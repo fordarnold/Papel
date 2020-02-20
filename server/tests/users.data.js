@@ -1,4 +1,7 @@
-const sampleUser = {
+/* eslint-disable import/no-extraneous-dependencies */
+import faker from 'faker';
+
+const existingUser = {
   email: 'test@test.com',
   firstName: 'Test',
   lastName: 'User',
@@ -8,9 +11,9 @@ const sampleUser = {
 };
 
 const newUser = {
-  email: 'example@test.com',
-  firstName: 'Example',
-  lastName: 'User',
+  email: faker.internet.email(),
+  firstName: faker.name.firstName,
+  lastName: faker.name.lastName,
   password: 'example', // TODO: encrypt password
   type: 'client',
   isAdmin: false,
@@ -35,7 +38,7 @@ const sampleAdmin = {
 };
 
 export default {
-  sampleUser,
+  existingUser,
   newUser,
   sampleStaff,
   sampleAdmin,
