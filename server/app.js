@@ -5,7 +5,7 @@ import cors from 'cors'; // Cross Origin Resource Sharing library
 
 import router from './routes/Router';
 
-// import User from './models/User';
+import User from './models/User';
 
 const app = express(); // Initialise the Express app server
 const PORT = process.env.PORT || 3000; // Specify the server port
@@ -52,11 +52,11 @@ app.use((req, res) => {
  */
 
 /** Start the server, on specified port */
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, async () => {
   console.log(`Papel API server listening at: http://localhost:${PORT}!`);
 
-  // // Create required tables in database.
-  // User.createTable();
+  // Create required database table.
+  await User.createTable();
 });
 
 export default server;

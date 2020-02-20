@@ -8,9 +8,6 @@ class UserController {
    * @param {*} res The HTTP response
    */
   static async register(req, res) {
-    // Create required database table.
-    await User.createTable();
-
     // Check if user's email exists...
     const userExists = await User.checkEmailExists(req.body.email);
     if (userExists) {
