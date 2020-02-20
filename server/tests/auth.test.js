@@ -32,7 +32,7 @@ describe('API Endpoint: /api/v1/auth/signup', () => {
   it('should create a new user account', (done) => {
     chai.request(app)
       .post('/api/v1/auth/signup')
-      .send(users.newUser)
+      .send(users.newUser) // send new user as request payload
       .then((res) => {
         res.should.have.status(201);
         res.body.should.have.property('message', 'User account created successfully');
@@ -43,16 +43,17 @@ describe('API Endpoint: /api/v1/auth/signup', () => {
       .catch((err) => done(err));
   });
 
-  // it('should not create a new user if email exists', (done) => {
-  //   chai.request(app)
-  //     .post('/api/v1/auth/signup')
-  //     .send(testUsers[1])
-  //     .end((err, res) => {
-  //       res.should.have.status(409);
-  //       res.body.should.have.property('error', 'The email for this user already exists');
-  //       done();
-  //     });
-  // });
+  it('should not create a new user if email exists', (done) => {
+    chai.request(app)
+      .post('/api/v1/auth/signup')
+      .send(users.sampleUser) // send existing user as request payload
+      .then((res) => {
+        res.should.have.status(409);
+        res.body.should.have.property('error', 'The email for this user already exists');
+        done();
+      })
+      .catch((err) => done(err));
+  });
 
   // it('should not create a new user if there is a validation error', (done) => {
   //   chai.request(app)
