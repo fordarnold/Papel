@@ -14,6 +14,7 @@ class UserController {
     // Check if user's email exists...
     const userExists = await User.checkEmailExists(req.body.email);
     if (userExists) {
+      // return a 409 HTTP error
       return res.status(409).json({
         status: 409,
         error: 'The email for this user already exists',
@@ -33,6 +34,7 @@ class UserController {
     // Read all users.
     const statusGetCollection = await User.getCollection();
     // return { statusCreateTable };
+    console.log(req, res);
     console.log(statusGetCollection);
   }
 }
