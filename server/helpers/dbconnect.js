@@ -7,16 +7,18 @@ import { Pool } from 'pg';
 
 const connectionString = 'postgres://lkxehoeg:u9omEm3ta6thNpeppMuzjSo7Ufbir2sa@rajje.db.elephantsql.com:5432/lkxehoeg';
 
-const connector = new Pool(connectionString);
+const connector = new Pool({ connectionString });
 
 connector.on('connect', () => {
-  console.log('Connected to the database');
+  console.info('\n-------------------------');
+  console.info('Connected to the database');
+  console.info('-------------------------\n');
 });
 
 export default async (queryText, params) => {
   try {
-    await connector.query(queryText, params);
+    return await connector.query(queryText, params);
   } catch (error) {
-    console.error(error);
+    return console.error(error);
   }
 };

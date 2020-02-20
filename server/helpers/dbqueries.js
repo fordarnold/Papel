@@ -11,13 +11,13 @@ const createUsersTable = `CREATE TABLE IF NOT EXISTS users(
     created_on TIMESTAMP WITH TIME ZONE DEFAULT NOW() NOT NULL)`;
 
 const createUserRecord = `INSERT INTO users (email, first_name, last_name, password, type, is_admin) 
-    VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`;
+    VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`;
 
 const dropUsersTable = 'DROP TABLE IF EXISTS users CASCADE';
 
 const findUserById = 'SELECT * FROM users WHERE id = $1';
 
-const findUserByEmail = 'SELECT * FROM users WHERE email = $1';
+export const findUserByEmail = 'SELECT * FROM users WHERE email = $1';
 
 const emailExist = 'SELECT exists(SELECT 1 FROM users WHERE email = $1)';
 
@@ -27,6 +27,5 @@ export default {
   dropUsersTable,
   createUserRecord,
   findUserById,
-  findUserByEmail,
   emailExist,
 };

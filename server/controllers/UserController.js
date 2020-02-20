@@ -7,9 +7,12 @@ class UserController {
    * @param {*} req The HTTP request
    * @param {*} res The HTTP response
    */
-  static register(req, res) {
+  static async register(req, res) {
+    // Create required database table.
+    await User.createTable();
+
     // Check if user's email exists...
-    const userExists = User.checkEmailExists(req.body.email);
+    const userExists = await User.checkEmailExists(req.body.email);
     if (userExists) {
       return res.status(409).json({
         status: 409,
@@ -17,21 +20,20 @@ class UserController {
       });
     }
     //
-    User.create(req.body);
+    const createdUser = await User.create(req.body);
     //
     return res.status(201).json({
       status: 201,
       message: 'User account created successfully',
-      // data: {
-      //   // token: Authenticate.generateToken(newUser.email, newUser.id, newUser.isAdmin),
-      //   email: req.body.email,
-      //   firstName: req.body.email,
-      //   lastName: req.body.email,
-      //   password: req.body.email, // TODO: encrypt password
-      //   type: req.body.email,
-      //   isAdmin: req.body.isAdmin,
-      // },
+      data: createdUser,
     });
+  }
+
+  static async getAll(req, res) {
+    // Read all users.
+    const statusGetCollection = await User.getCollection();
+    // return { statusCreateTable };
+    console.log(statusGetCollection);
   }
 }
 
