@@ -5,7 +5,9 @@ import { Pool } from 'pg';
 // const isTesting = process.env.NODE_ENV === 'testing';
 // const isProduction = process.env.NODE_ENV === 'production';
 
-const connector = new Pool('postgres://lkxehoeg:u9omEm3ta6thNpeppMuzjSo7Ufbir2sa@rajje.db.elephantsql.com:5432/lkxehoeg');
+const connectionString = 'postgres://lkxehoeg:u9omEm3ta6thNpeppMuzjSo7Ufbir2sa@rajje.db.elephantsql.com:5432/lkxehoeg';
+
+const connector = new Pool(connectionString);
 
 connector.on('connect', () => {
   console.log('Connected to the database');
