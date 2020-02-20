@@ -12,7 +12,7 @@ const router = Router();
 
 // Auth routes
 router.post('/auth/signup', UserController.register);
-// router.post('/auth/signin', UserController.startSession);
+router.post('/auth/signin', UserController.startSession);
 
 // User routes
 router.get('/users', UserController.getAll);
