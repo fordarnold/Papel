@@ -1,4 +1,5 @@
 import 'dotenv/config'; // Initialise dotenv library
+import 'regenerator-runtime/runtime'; // Enable async, await functionality globally
 import express from 'express'; // Express web framework
 import cors from 'cors'; // Cross Origin Resource Sharing library
 
