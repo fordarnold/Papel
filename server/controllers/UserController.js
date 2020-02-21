@@ -66,6 +66,37 @@ class UserController {
       data: collection.rows,
     });
   }
+
+  static async getSingle(req, res) {
+    // Read all users.
+    const userProfile = await User.findById(req.params.userId);
+    if (userProfile === undefined) {
+      return res.status(404).json({
+        status: 404,
+        error: 'The requested user profile does not exist',
+      });
+    }
+    return res.status(200).json({
+      status: 200,
+      data: userProfile,
+    });
+  }
+
+  static async removeSingle(req, res) {
+    // Read all users.
+    const result = await User.remove(req.params.userId);
+
+    if (result.rowCount <= 0) {
+      return res.status(404).json({
+        status: 404,
+        error: 'The requested user profile does not exist',
+      });
+    }
+    return res.status(200).json({
+      status: 200,
+      message: 'User deleted successfully',
+    });
+  }
 }
 
 export default UserController;

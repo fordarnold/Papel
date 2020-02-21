@@ -40,6 +40,16 @@ class User {
     const records = await dbconn(query.findUserByEmail, [email]);
     return records.rows[0];
   }
+
+  async findById(id) {
+    const records = await dbconn(query.findUserById, [id]);
+    return records.rows[0];
+  }
+
+  async remove(id) {
+    const result = await dbconn(query.deleteUser, [id]);
+    return result;
+  }
 }
 
 export default new User();

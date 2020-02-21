@@ -2,7 +2,6 @@ import Router from 'express';
 
 import UserController from '../controllers/UserController';
 import AccountController from '../controllers/AccountController';
-import TransactionController from '../controllers/TransactionController';
 
 const router = Router();
 
@@ -18,18 +17,13 @@ router.post('/auth/signin', UserController.startSession);
 
 // User routes
 router.get('/users', UserController.getAll);
+router.get('/users/:userId', UserController.getSingle);
+router.delete('/users/:userId', UserController.removeSingle);
 
 // Account routes
 router.post('/accounts', AccountController.create);
 router.get('/accounts', AccountController.getAll);
-router.get('/accounts/:accountId', AccountController.findById);
-router.delete('/accounts/:accountId', AccountController.findById);
-
-// Transaction routes
-router.post('/transactions', TransactionController.create);
-router.get('/transactions', TransactionController.getAll);
-// router.get('/transactions/:transactionId', TransactionController.findById);
-// router.put('/transactions/:transactionId', TransactionController.update);
-// router.delete('/transactions/:transactionId', TransactionController.findById);
+router.get('/accounts/:accountNumber', AccountController.getSingle);
+// router.delete('/accounts/:accountNumber', AccountController.removeSingle);
 
 export default router;
