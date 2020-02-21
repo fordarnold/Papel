@@ -1,7 +1,8 @@
 /* eslint-disable max-len */
 /* eslint-disable class-methods-use-this */
 import dbconn from '../helpers/dbconnect';
-import query, { findUserByEmail } from '../helpers/dbqueries';
+import query from '../helpers/dbq-users';
+import Auth from '../helpers/auth';
 
 class User {
   async createTable() {
@@ -17,15 +18,18 @@ class User {
   async create({
     email, firstName, lastName, password, type, isAdmin,
   }) {
-    const userCreated = await dbconn(query.createUserRecord, [email, firstName, lastName, password, type, isAdmin]);
-
-    if (userCreated) return userCreated.rows[0];
+    // Encrypt user password
+    const hashedPwd = await Auth.hashPassword(password);
+    // Create new user in database storage
+    const createdUser = await dbconn(query.createUserRecord, [email, firstName, lastName, hashedPwd, type, isAdmin]);
+    // If user was created successfully
+    if (createdUser) return createdUser.rows[0];
+    // If user was not created
     return undefined;
   }
 
   async checkEmailExists(email) {
-    const records = await dbconn(findUserByEmail, [email]);
-    console.log(records.rows[0] !== undefined);
+    const records = await dbconn(query.findUserByEmail, [email]);
     // if user exists
     if (records.rows[0] !== undefined) return true;
     // if user does not exist
@@ -33,9 +37,18 @@ class User {
   }
 
   async findByEmail(email) {
-    const { records } = await dbconn(findUserByEmail, [email]);
-    console.log(records);
-    return records[0];
+    const records = await dbconn(query.findUserByEmail, [email]);
+    return records.rows[0];
+  }
+
+  async findById(id) {
+    const records = await dbconn(query.findUserById, [id]);
+    return records.rows[0];
+  }
+
+  async remove(id) {
+    const result = await dbconn(query.deleteUser, [id]);
+    return result;
   }
 }
 

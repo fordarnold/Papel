@@ -68,3 +68,32 @@ describe('API Endpoint: /api/v1/auth/signup', () => {
   //     });
   // });
 });
+
+describe('API Endpoint: /api/v1/auth/signin', () => {
+  it('should sign in with a user account', async () => {
+    /** Asyncronous response */
+    const res = await chai.request(app)
+      .post('/api/v1/auth/signin')
+      .send({
+        email: users.existingUser.email,
+        password: users.existingUser.password,
+      });
+
+    res.should.have.status(200);
+    res.body.should.have.property('data');
+  });
+
+  // it('should not sign in without an existing user account', async () => {
+  //   /** Asyncronous response */
+  //   const res = await chai.request(app)
+  //     .post('/api/v1/auth/signin')
+  //     .send({
+  //       email: users.randomUserLogin.email,
+  //       password: users.randomUserLogin.password,
+  //     });
+  //   console.log(res.body);
+
+  //   res.should.have.status(401);
+  //   res.body.should.have.property('error', 'Unauthorized');
+  // });
+});
