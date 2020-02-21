@@ -6,7 +6,7 @@ import cors from 'cors'; // Cross Origin Resource Sharing library
 import router from './routes/Router';
 
 import User from './models/User';
-import Account from './models/Account';
+// import Account from './models/Account';
 
 const app = express(); // Initialise the Express app server
 const PORT = process.env.PORT || 3000; // Specify the server port
@@ -58,7 +58,7 @@ const server = app.listen(PORT, async () => {
 
   // Create required database tables when server starts.
   await User.createTable();
-  await Account.createTable();
+  // await Account.createTable();
 });
 
 export default server;

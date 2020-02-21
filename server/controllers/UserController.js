@@ -37,10 +37,12 @@ class UserController {
     // Verify password
     const isCorrectPassword = Auth.checkPassword(req.body.password, user.password);
 
+    console.log(isCorrectPassword);
+
     if (isCorrectPassword) {
       return res.status(200).json({
         status: 200,
-        message: 'User is successfully logged in',
+        // message: 'User is successfully logged in',
         data: {
           token: Auth.generateToken(req.body.email, user.id, user.is_admin),
           id: user.id,

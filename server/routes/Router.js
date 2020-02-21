@@ -1,7 +1,7 @@
 import Router from 'express';
 
 import UserController from '../controllers/UserController';
-import AccountController from '../controllers/AccountController';
+// import AccountController from '../controllers/AccountController';
 
 const router = Router();
 
@@ -21,9 +21,9 @@ router.get('/users/:userId', UserController.getSingle);
 router.delete('/users/:userId', UserController.removeSingle);
 
 // Account routes
-router.post('/accounts', AccountController.create);
-router.get('/accounts', AccountController.getAll);
-router.get('/accounts/:accountNumber', AccountController.getSingle);
+// router.post('/accounts', AccountController.create);
+// router.get('/accounts', AccountController.getAll);
+// router.get('/accounts/:accountNumber', AccountController.getSingle);
 // router.delete('/accounts/:accountNumber', AccountController.removeSingle);
 
 export default router;
