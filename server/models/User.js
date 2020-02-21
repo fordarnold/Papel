@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable class-methods-use-this */
 import dbconn from '../helpers/dbconnect';
-import query, { findUserByEmail } from '../helpers/dbqueries';
+import query from '../helpers/dbq-users';
 import Auth from '../helpers/auth';
 
 class User {
@@ -29,7 +29,7 @@ class User {
   }
 
   async checkEmailExists(email) {
-    const records = await dbconn(findUserByEmail, [email]);
+    const records = await dbconn(query.findUserByEmail, [email]);
     // if user exists
     if (records.rows[0] !== undefined) return true;
     // if user does not exist
@@ -37,7 +37,7 @@ class User {
   }
 
   async findByEmail(email) {
-    const records = await dbconn(findUserByEmail, [email]);
+    const records = await dbconn(query.findUserByEmail, [email]);
     return records.rows[0];
   }
 }

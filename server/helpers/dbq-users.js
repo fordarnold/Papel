@@ -15,17 +15,23 @@ const createUserRecord = `INSERT INTO users (email, first_name, last_name, passw
 
 const dropUsersTable = 'DROP TABLE IF EXISTS users CASCADE';
 
+const deleteUser = 'DELETE FROM users WHERE id = $1';
+
 const findUserById = 'SELECT * FROM users WHERE id = $1';
 
-export const findUserByEmail = 'SELECT * FROM users WHERE email = $1';
+const findUserByEmail = 'SELECT * FROM users WHERE email = $1';
 
-const emailExist = 'SELECT exists(SELECT 1 FROM users WHERE email = $1)';
+const updateUserFirstName = 'UPDATE users SET first_name = $1 WHERE id = $2';
+const updateUserLastName = 'UPDATE users SET last_name = $1 WHERE id = $2';
 
 export default {
   getUsers,
   createUsersTable,
   dropUsersTable,
+  deleteUser,
   createUserRecord,
   findUserById,
-  emailExist,
+  findUserByEmail,
+  updateUserFirstName,
+  updateUserLastName,
 };

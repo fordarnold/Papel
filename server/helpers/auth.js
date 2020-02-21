@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 class Auth {
   /**
@@ -24,6 +25,14 @@ class Auth {
    */
   static checkPassword(pass, encrypted) {
     return bcrypt.compareSync(pass, encrypted);
+  }
+
+  static generateToken(email, id, isAdmin) {
+    return jwt.sign({ email, id, isAdmin }, process.env.ACCESS_TOKEN_KEY);
+  }
+
+  static verifyToken(token) {
+    return jwt.verify(token, process.env.ACCESS_TOKEN_KEY);
   }
 }
 
