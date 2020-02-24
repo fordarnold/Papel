@@ -25,6 +25,8 @@ a {
   font-family: 'Poppins', 'Arial', sans-serif;
 }
 
+a:visited { color: purple; } /* ~https://evertpot.com/visited-links */
+
 /* Typography */
 
 h1, h2, h3 {
