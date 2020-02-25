@@ -30,10 +30,16 @@ describe('API Endpoint: /api/v1/auth/signup', () => {
   // });
   it('should create a new user account', async () => {
     /** Asyncronous response */
-    const res = await chai.request(app).post('/api/v1/auth/signup').send(users.newUser);
+    const res = await chai
+      .request(app)
+      .post('/api/v1/auth/signup')
+      .send(users.newUser);
 
     res.should.have.status(201);
-    res.body.should.have.property('message', 'User account created successfully');
+    res.body.should.have.property(
+      'message',
+      'User account created successfully'
+    );
     res.body.should.be.a('object');
 
     // await chai.request(app)
@@ -51,10 +57,16 @@ describe('API Endpoint: /api/v1/auth/signup', () => {
 
   it('should not create a new user if email exists', async () => {
     /** Asyncronous response */
-    const res = await chai.request(app).post('/api/v1/auth/signup').send(users.existingUser);
+    const res = await chai
+      .request(app)
+      .post('/api/v1/auth/signup')
+      .send(users.existingUser);
 
     res.should.have.status(409);
-    res.body.should.have.property('error', 'The email for this user already exists');
+    res.body.should.have.property(
+      'error',
+      'The email for this user already exists'
+    );
   });
 
   // it('should not create a new user if there is a validation error', (done) => {
@@ -72,11 +84,12 @@ describe('API Endpoint: /api/v1/auth/signup', () => {
 describe('API Endpoint: /api/v1/auth/signin', () => {
   it('should sign in with a user account', async () => {
     /** Asyncronous response */
-    const res = await chai.request(app)
+    const res = await chai
+      .request(app)
       .post('/api/v1/auth/signin')
       .send({
         email: users.existingUser.email,
-        password: users.existingUser.password,
+        password: users.existingUser.password
       });
 
     res.should.have.status(200);

@@ -5,6 +5,10 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+    'plugin:prettier/recommended',
+  ],
+  plugins: [
+    'prettier',
   ],
   globals: {
     Atomics: 'readonly',
@@ -15,7 +19,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    "no-console": ["off"], // ~https://eslint.org/docs/rules/no-console
-    "padded-blocks": ["off"], // ~https://eslint.org/docs/rules/padded-blocks
+    'no-console': ['off'], // ~https://eslint.org/docs/rules/no-console
+    'padded-blocks': ['off'], // ~https://eslint.org/docs/rules/padded-blocks
+    'prettier/prettier': 'warn'
   },
 };
