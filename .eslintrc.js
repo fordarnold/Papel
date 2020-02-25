@@ -15,5 +15,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    "no-console": ["off"], // ~https://eslint.org/docs/rules/no-console
+    "padded-blocks": ["off"], // ~https://eslint.org/docs/rules/padded-blocks
   },
 };
