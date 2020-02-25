@@ -4,6 +4,7 @@
   "description": "Light-weight core banking application",
   "main": "server/app.js",
   "scripts": {
+    "lint": "eslint",
     "test": "nyc --reporter=text --reporter=lcov mocha --timeout 10s --recursive 'server/tests/**/*.test.js' --require @babel/register",
     "coverage": "npm test && nyc report --reporter=text-lcov | coveralls",
     "start": "nodemon --exec babel-node ./server/app.js",
